@@ -1,5 +1,6 @@
 import tkinter as tk
 import webbrowser
+from validation import validate_url, validate_email
 
 class ContactWindow(tk.Toplevel):
     def __init__(self, parent):
@@ -16,4 +17,8 @@ class ContactWindow(tk.Toplevel):
         self.back_button.pack()
 
     def open_shop(self):
-        webbrowser.open('https://yourshop.com')
+        url = 'https://yourshop.com'
+        if validate_url(url):
+            webbrowser.open(url)
+        else:
+            print(f"Invalid URL: {url}")
