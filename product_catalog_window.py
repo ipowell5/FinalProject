@@ -1,6 +1,9 @@
+
+
 import tkinter as tk
 from product_details_window import ProductDetailsWindow
 from contact_window import ContactWindow
+from validation import validate_product_index
 
 class ProductCatalogWindow(tk.Tk):
     def __init__(self):
