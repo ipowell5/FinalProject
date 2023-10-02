@@ -7,7 +7,7 @@ class ContactWindow(tk.Toplevel):
         super().__init__(parent)
         self.title("Contact Information")
 
-        self.email_label = tk.Label(self, text="Email: shop@example.com")
+        self.email_label = tk.Label(self, text="Email: TwistedToothFairyShop@gmail.com")
         self.email_label.pack()
 
         self.shop_button = tk.Button(self, text="Shop Available Pieces", command=self.open_shop)
@@ -17,7 +17,7 @@ class ContactWindow(tk.Toplevel):
         self.back_button.pack()
 
     def open_shop(self):
-        url = 'https://yourshop.com'
+        url = 'https://www.twistedtoothfairy.com'
         if validate_url(url):
             webbrowser.open(url)
         else:
